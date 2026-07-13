@@ -1,0 +1,228 @@
+:root {
+  color-scheme: light;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e1b4b, #0b0f1a 45%);
+  color: inherit;
+}
+
+.app-shell {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.2);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  color: #a5b4fc;
+  margin-bottom: 0.4rem;
+}
+
+.app-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.subhead {
+  margin: 0;
+  color: #cbd5f5;
+  max-width: 48ch;
+  line-height: 1.5;
+}
+
+.metadata {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.panel {
+  background: rgba(15, 23, 42, 0.86);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.3);
+}
+
+.panel--form h2,
+.panel--list h2 {
+  margin-top: 0;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.panel-stats {
+  color: #cbd5f5;
+  font-size: 0.9rem;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+input {
+  border-radius: 0.65rem;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(15, 23, 42, 0.8);
+  color: #e2e8f0;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.2);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0.9rem 1.2rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+}
+
+.text-button {
+  background: transparent;
+  color: #a5b4fc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.form-error {
+  color: #f87171;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.countdown-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.8);
+  margin-bottom: 1rem;
+}
+
+.countdown-card--expired {
+  border-color: rgba(248, 113, 113, 0.6);
+}
+
+.countdown-card h3 {
+  margin: 0;
+}
+
+.countdown-card__date {
+  margin: 0.25rem 0 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.countdown-card__timer {
+  min-width: 220px;
+}
+
+.timer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.timer-grid strong {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.timer-grid span {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.countdown-card__expired-text {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #cbd5f5;
+  border: 1px dashed rgba(226, 232, 240, 0.4);
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+}
